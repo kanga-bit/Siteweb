@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Boutique en ligne</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inscription</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="product.html">Produits</a></li>
+                <li><a href="cart.html">Panier</a></li>
+                <li><a href="checkout.html">Paiement</a></li>
+                <li><a href="login.html">Connexion</a></li>
+                <li><a href="register.html">Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Créer un compte</h2>
+        <form action="php/register.php" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Inscription</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Boutique en ligne</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
