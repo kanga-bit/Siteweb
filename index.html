@@ -4,29 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Boutique en ligne</title>
-    <link rel="stylesheet" href="css_styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .welcome {
+            padding: 20px;
+            text-align: center;
+            background: #ffffff;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .search-container {
+            margin-top: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background: #ffffff;
+            color: #35424a;
+            cursor: pointer;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .product {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Bienvenue à notre boutique en ligne</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="product.html">Produits</a></li>
-                <li><a href="cart.html">Panier</a></li>
-                <li><a href="checkout.html">Paiement</a></li>
-                <li><a href="login.html">Connexion</a></li>
-                <li><a href="register.html">Inscription</a></li>
-            </ul>
+            <a href="#">Accueil</a>
+            <a href="#">Produits</a>
+            <a href="#">Panier</a>
+            <a href="#">Paiement</a>
+            <a href="#">Connexion</a>
+            <a href="#">Inscription</a>
         </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Rechercher des produits...">
+            <button type="submit">Recherche</button>
+        </div>
     </header>
-    <main>
+    <div class="container">
+        <div class="welcome">
+            <h2>Bienvenue dans notre boutique !</h2>
+            <p>Découvrez nos derniers produits et profitez de nos offres spéciales.</p>
+        </div>
         <h2>Nos derniers produits</h2>
-        <!-- Affichage des produits -->
-    </main>
+        <div class="products">
+            <div class="product">Produit 1</div>
+            <div class="product">Produit 2</div>
+            <div class="product">Produit 3</div>
+            <div class="product">Produit 4</div>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2025 Boutique en ligne</p>
+        <p>© 2025 Boutique en ligne</p>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Page d'accueil chargée avec succès !");
+            // Ajouter des fonctionnalités JavaScript ici si nécessaire
+        });
+    </script>
 </body>
 </html>
