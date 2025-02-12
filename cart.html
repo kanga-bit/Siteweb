@@ -4,29 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier - Boutique en ligne</title>
-    <link rel="stylesheet" href="css_styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eaeaea;
+            padding: 10px 0;
+        }
+        .cart-summary {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .cart-summary p {
+            margin: 5px 0;
+        }
+        .checkout-btn {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Votre panier</h1>
+        <h1>Votre Panier</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="product.html">Produits</a></li>
-                <li><a href="cart.html">Panier</a></li>
-                <li><a href="checkout.html">Paiement</a></li>
-                <li><a href="login.html">Connexion</a></li>
-                <li><a href="register.html">Inscription</a></li>
-            </ul>
+            <a href="#">Accueil</a>
+            <a href="#">Produits</a>
+            <a href="#">Panier</a>
+            <a href="#">Paiement</a>
+            <a href="#">Connexion</a>
+            <a href="#">Inscription</a>
         </nav>
     </header>
-    <main>
-        <h2>Contenu de votre panier</h2>
-        <!-- Affichage du panier -->
-    </main>
+    <div class="container">
+        <h2>Articles dans votre panier</h2>
+        <div class="cart-item">
+            <span>Produit 1</span>
+            <span>10,00 €</span>
+        </div>
+        <div class="cart-item">
+            <span>Produit 2</span>
+            <span>15,00 €</span>
+        </div>
+        <div class="cart-item">
+            <span>Produit 3</span>
+            <span>20,00 €</span>
+        </div>
+        <div class="cart-summary">
+            <p>Total : 45,00 €</p>
+            <button class="checkout-btn">Procéder au paiement</button>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2025 Boutique en ligne</p>
+        <p>© 2025 Boutique en ligne</p>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Page du panier chargée avec succès !");
+            // Ajouter des fonctionnalités JavaScript ici si nécessaire
+        });
+    </script>
 </body>
 </html>
