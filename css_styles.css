@@ -1,8 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que le corps occupe toute la hauteur de la fenêtre */
+}
+
+nav {
+    margin-top: auto; /* Pousse le nav vers le bas */
+    background-color: #f8f9fa; /* Exemple de couleur de fond */
+    padding: 10px; /* Un peu d'espace autour du nav */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Ombre pour un effet visuel */
+}
+
+ul {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    display: flex; /* Aligne les éléments en ligne */
+    justify-content: space-around; /* Espace égal entre les éléments */
 }
 
 header {
@@ -26,7 +40,6 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-
 main {
     padding: 20px;
     background-color: #fff;
