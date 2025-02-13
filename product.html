@@ -53,15 +53,6 @@
             gap: 15px;
             margin: 20px 0;
         }
-li {
-display: inline-block;
-}
-.li a {
-margin-left: 30px;
-display: inline-block;
-color: #35424a;
-text-decoration: none;
-}
         .product {
             background: #ffffff;
             padding: 10px;
@@ -77,44 +68,82 @@ text-decoration: none;
             bottom: 0;
             width: 100%;
         }
+        ul {
+            display: flex;
+            justify-content: center;
+            background: #ffffff;
+            padding: 10px 0;
+        }
+        li {
+            margin: 0 15px;
+        }
+        li a {
+            color: #35424a;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue à notre boutique en ligne </h1>
-<nav>
-                <li><a href="login.html">Connexion</a></li>
-                <li><a href="register.html">Inscription</a></li>
-                </nav>
+        <h1>Bienvenue à notre boutique en ligne</h1>
+        <nav>
+            <li><a href="login.html">Connexion</a></li>
+            <li><a href="register.html">Inscription</a></li>
+        </nav>
         <div class="search-container">
-            <input type="text" placeholder="Rechercher des produits...">
-            <button type="submit">Recherche</button>
+            <input type="text" id="searchInput" placeholder="Rechercher des produits...">
+            <button id="searchButton">Recherche</button>
         </div>
     </header>
     <div class="container">
         <h2>Nos derniers produits</h2>
-        <div class="products">
-            <div class="product">Produit 1</div>
-            <div class="product">Produit 2</div>
-            <div class="product">Produit 3</div>
-            <div class="product">Produit 4</div>
+        <div class="products" id="productsContainer">
+            <div class="product" data-name="Produit 1">Produit 1</div>
+            <div class="product" data-name="Produit 2">Produit 2</div>
+            <div class="product" data-name="Produit 3">Produit 3</div>
+            <div class="product" data-name="Produit 4">Produit 4</div>
         </div>
     </div>
-
-<div style="bottom: 0; position: fixed; background: #ffffff; color: #35424a; width: 100%;">
-   <ul>
-    <li class="li"><a href="index.html">Accueil</a></li>
-                <li class="li"><a href="product.html">Produits</a></li>
-                <li class="li"><a href="cart.html">Panier</a></li>
-</ul>
-</div>
+    <div style="bottom: 0; position: fixed; background: #ffffff; color: #35424a; width: 100%;">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="product.html">Produits</a></li>
+            <li><a href="cart.html">Panier</a></li>
+        </ul>
+    </div>
     <footer>
         <p>© 2025 Boutique en ligne</p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             console.log("Page chargée avec succès !");
-            // Vous pouvez ajouter plus de JavaScript ici pour interactivité
+            
+            const searchInput = document.getElementById('searchInput');
+            const productsContainer = document.getElementById('productsContainer');
+            const searchButton = document.getElementById('searchButton');
+            
+            // Fonction pour filtrer les produits
+            function filterProducts() {
+                const searchQuery = searchInput.value.toLowerCase();
+                const products = productsContainer.getElementsByClassName('product');
+                
+                // Boucle sur chaque produit et masque ceux qui ne correspondent à la recherche
+                Array.from(products).forEach(function(product) {
+                    const productName = product.getAttribute('data-name').toLowerCase();
+                    if (productName.includes(searchQuery)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+
+            // Déclencher la recherche lorsque l'utilisateur tape dans l'input
+            searchInput.addEventListener('input', filterProducts);
+
+            // Recherche manuelle au clic du bouton
+            searchButton.addEventListener('click', filterProducts);
         });
     </script>
 </body>
