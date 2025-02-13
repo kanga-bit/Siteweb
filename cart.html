@@ -57,6 +57,10 @@
             border-radius: 5px;
             cursor: pointer;
         }
+.li {
+display: inline-block;
+margin-left: 20px;
+}
         footer {
             text-align: center;
             padding: 20px 0;
@@ -72,10 +76,6 @@
     <header>
         <h1>Votre Panier</h1>
         <nav>
-            <li><a href="index.html">Accueil</a></li>
-                <li><a href="product.html">Produits</a></li>
-                <li><a href="cart.html">Panier</a></li>
-                <li><a href="checkout.html">Paiement</a></li>
                 <li><a href="login.html">Connexion</a></li>
                 <li><a href="register.html">Inscription</a></li>
             </nav>
@@ -99,6 +99,13 @@
             <button class="checkout-btn"><a href="checkout.html">procéderaupaiement</a></button>
         </div>
     </div>
+<div style="bottom: 0; position: fixed; background: #ffffff; color: #35424a; width: 100%;">
+   <ul>
+    <li class="li"><a href="index.html">Accueil</a></li>
+                <li class="li"><a href="product.html">Produits</a></li>
+                <li class="li"><a href="cart.html">Panier</a></li>
+</ul>
+</div>
     <footer>
         <p>© 2025 Boutique en ligne</p>
     </footer>
