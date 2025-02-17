@@ -1,0 +1,11 @@
+#sample {
+  left: 0;
+  top: 0;
+  color: white;
+  position: fixed;
+  
+}
+.ul1 {
+  position: fixed;
+  display: none;
+}
